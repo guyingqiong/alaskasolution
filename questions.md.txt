@@ -1,0 +1,5 @@
+1.traffice valume
+2.current datacenter design
+3.cost and expectation( risk and return)
+4.current technology stack
+

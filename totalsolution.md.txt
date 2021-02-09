@@ -1,0 +1,81 @@
+
+Design document
+
+Project Description of Target SystemGoal: 
+   expecting to find the predictable pattern to increase the willingnessof customer to buy the ticket
+
+High-level architecture:
+   The  system organized as a loosely connected set of clients and servers that share a common set of
+ communication data. Servers make resources available to a community of clients and increase the experice of the client 
+   When a request is received by the server Stream Manager, the type of request is determined and the path of the URL is resolved via the Path Resolver.
+   body will contain all the necessary elements for server DB and Service
+
+Privacy Information
+  what kind of user data can be collected and stored
+
+Version History 
+   1.0.0
+
+Design techbology forecast/Dependencies
+   python /Java /SOA /AWS or Azure/ sql or nosql
+
+System-wide design decisions on the Data 
+  2 ways to capture and utilize the Data : 
+
+1. Stationary
+   1.1. capture the client webpage events
+   1.2 map the selected elements to a webform/json string object
+   1.3 post to the backend DB
+   1.4 browser sessionid based , if send out from one session, it will belong to one group for analysis
+   1.5 DB - permenant storage / real time analysis
+   1.6 table schema 
+   
+2.Machine learning self adjusted 
+   2.1  capture the first client webpage event
+   2.2  post to server
+   2.3  get the list of recommendation list back to the client (based on the models analysis )
+   2.4  capture the webpage event based on the user reaction 
+   2.5  send to server to adjust the recommadation list 
+   2.6  Data will be feed into the model , instead of directly store in the storage
+
+
+Data Type:
+  {
+  "$sessionid": "xxx",
+  "$schema": "flightsearch",
+  " ": "seattle",
+  "to": "to",
+  "properties": {
+    "from": {
+      "type": "string",
+      "description": "from."
+    },
+    "to": {
+      "type": "string",
+      "description": "destination."
+    },
+    "data": {
+      "starttime": "xxxxxx.",
+      "backtime": "xxxx",
+      "number": xx
+    }
+  }
+}
+
+
+Approval factor:
+10% traffic on first method ,10% traffic on second method to compare the convension rate 
+client bought the ticket will be the most measuable factor
+
+Specify any constraints for the design team using this document.
+ 
+Standards Compliance
+Hardware Limitations
+
+Design Considerations:  time/space/hardware limitation
+
+Assumptions and Dependencies: development enviorment.
+General Constraints: Describe any constraints that could have an impact on the design of the software.
+Goals and Guidelines: Describe any goals and guidelines for the design of the software.
+Development Methods: Describe the software design method that will be used.
+ 

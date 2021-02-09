@@ -1,0 +1,11 @@
+1. station method
+   pro and con:
+      1. easy to design/store/analysis 
+      2. hard to uitlize previous data
+      3.lots of storeage/ IO expense
+
+2.ML method 
+    pro and con
+      1. light design /SOA /resource depency 
+      2.good model to increase the revenue
+        
